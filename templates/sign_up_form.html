@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block content %}
+
+        <form action="/validate" method="post">
+        <table> 
+        <tr>
+       <td><label for="username">User Name</label>
+            <input id= "username" type = "text" name = "username" value='{{username}}'/>
+            </td> 
+           <td><p class="error">{{username_error}}</p></td> 
+</tr>
+<tr>
+        <td><label for="password">Password</label>
+            <input id= "password" type = "password" name = "password"/>
+            </td>
+            <td><p class="error">{{password_error}}</p></td>
+  </tr>    
+  <tr> 
+        <td><label for="verify-password">Verify Password</label>
+            <input id= "verify-password" type = "password" name = "verify-password" />
+            </td>
+           <td><p class="error">{{verify_password_error}}</p></td> 
+            </tr> 
+      <tr>
+          <td>
+        <label for="Email">Email (optional)</label>
+            <input id= "email" type = "text" name = "email" value='{{email}}'/>  
+            </td>
+            <td><p class="error">{{email_error}}</p>  </td>
+            </tr> 
+            </table>
+            <input type= "submit" value="Submit"/>
+        </form>
+      
+      <!--
+      <h1>Signup</h1>
+        <form method="post">
+            <table>
+                <tr>
+                    <td><label for="username">Username</label></td>
+                    <td>
+                        <input name="username" type="text" value="drip">
+                        <span class="error"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="password">Password</label></td>
+                    <td>
+                        <input name="password" type="password">
+                        <span class="error">That's not a valid password</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="verify">Verify Password</label></td>
+                    <td>
+                        <input name="verify" type="password">
+                        <span class="error"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email (optional)</label></td>
+                    <td>
+                        <input name="email" value="">
+                        <span class="error"></span>
+                    </td>
+                </tr>
+            </table>
+            <input type="submit">
+        </form>
+        -->
+{% endblock %}
